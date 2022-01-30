@@ -1,0 +1,388 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url("eu.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    font-family: "Raleway", sans-serif;
+    overflow: hidden;
+}
+
+/* ------------------------------------START SCREEN ------------------------------------------------- */
+
+.startScreen {
+    width: 300px;
+    height: 100%;
+    margin-left: 20%;
+    color: white;
+    background-color: rgba(47, 0, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.startScreen img {
+
+    width: 230px;
+    height: auto;
+}
+
+
+.startScreen .start {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    color: blue;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+}
+
+
+.startScreen .start:hover {
+    border: 2px solid rgb(27, 2, 51);
+}
+
+.startScreen .instrucText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+
+
+.down {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+
+.rotation {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    
+}
+
+
+.instructions {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 2s ease-in-out;
+
+}
+
+.instructions p {
+    width: 80%;
+    transition: all 2s ease-in-out;
+}
+
+
+/* ------------------------------------BUTÕES ------------------------------------------------- */
+
+
+.buttondiv {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+
+}
+
+.presser {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    border: 4px solid #c80815;
+    position: absolute;
+
+}
+
+.presser:focus {
+    border: none;
+    background-color: brown;
+}
+
+#lisbon {
+    top: 90%;
+    left: 41%;
+}
+
+#madrid {
+    top: 92%;
+    left: 45%;
+}
+
+#paris {
+    top: 70%;
+    left: 52%;
+}
+
+#dublin {
+    top: 55%;
+    left: 44%;
+}
+
+
+#amsterdam {
+    top: 60%;
+    left: 55%;
+}
+
+#berlin {
+    top: 60%;
+    left: 60%;
+}
+
+#copenhagen {
+    top: 50%;
+    left: 58%;
+}
+
+#warsaw {
+    top: 60%;
+    left: 65%;
+}
+
+#rome {
+    top: 85%;
+    left: 60%;
+}
+
+#bucharest {
+    top: 78%;
+    left: 72%;
+}
+
+/* ------------------------------------GAME OVER ------------------------------------------------- */
+
+
+.gameOver {
+    margin: auto;
+    width: 300px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 25px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 10px 18px #888888;
+    color: rgb(29, 28, 28);
+    margin-top: 200px;
+
+}
+
+.gameOver h1 {
+    font-weight: 900;
+    color: rgb(29, 28, 28);
+}
+
+
+.gameOver .startAgain {
+    background-color: blue;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.gameOver .startAgain:hover {
+    border: 4px solid darkblue;
+    background-color: rgb(0, 0, 221);
+}
+
+
+/* ------------------------------------VITORIA------------------------------------------------- */
+
+.vitoria {
+    margin: auto;
+    width: 350px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 25px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 10px 18px #888888;
+    color: rgb(29, 28, 28);
+    margin-top: 200px;
+    text-align: center;
+}
+
+.vitoria h1 {
+    width: 90%;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.vitoria span {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.vitoria p {
+    width: 90%;
+}
+
+
+.vitoria .startAgain {
+    background-color: blue;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.vitoria .startAgain:hover {
+    border: 4px solid darkblue;
+    background-color: rgb(0, 0, 221);
+}
+
+
+
+/* ------------------------------------PERGUNTAS------------------------------------------------- */
+
+
+
+.pergunta {
+    width: 300px;
+    height: 140px;
+    background-color: white;
+    border-radius: 25px;
+    display: none;
+    box-shadow: 5px 10px 18px #888888;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px 15px;
+    margin-top: 200px;
+    margin-left: 200px;
+    color: rgb(29, 28, 28);
+}
+
+.pergunta h2 {
+    font-size: 1.3rem;
+}
+
+.pergunta h3 {
+    margin-top: 3px;
+    font-weight: 500;
+}
+
+.pergunta .lower {
+    padding-top: 10px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pergunta .lower input {
+    border-radius: 5px;
+    height: 1.5rem;
+}
+
+.pergunta .lower button {
+    border: none;
+    width: 50px;
+    height: 25px;
+    background: blueviolet;
+    color: white;
+    border-radius: 10px;
+    font-size: .7rem;
+}
+
+.pergunta .lower button:hover {
+    border: 2px solid darkblue;
+}
+
+.warsaw-btn {
+    margin-top: 20px;
+}
+
+#perguntaLisboa {
+    display: none;
+}
+
+#perguntaMadrid {
+    display: none;
+}
+
+#perguntaParis {
+    display: none;
+}
+
+#perguntaAmsterdam {
+    display: none;
+}
+
+#perguntaDublin {
+    display: none;
+    height: 170px;
+}
+
+#perguntaRome {
+    display: none;
+    height: 180px;
+}
+
+#perguntaWarsaw {
+    display: none;
+    height: 250px;
+}
+
+.polishForm .first {
+    display: flex;
+    align-items: center;
+}
+
+.polishForm .first input {
+    margin-right: 10px;
+}
+
+#perguntaBerlin {
+    display: none;
+    height: 150px;
+}
+
+#perguntaCopenhagen {
+    display: none;
+    height: 150px;
+}
+
+#perguntaBucharest {
+    display: none;
+    height: 250px;
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Europe Quizz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,500;0,700;0,900;1,500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- -------------------------------START SCREEN----------------------------------------------------------------------------------------------- -->
+
+    <div class="startScreen">
+        <img src="logo.png" alt="logo">
+        <div class="instrucText">
+            <h4>Instruções</h4>
+            <i class="arrow down"></i>
+        </div>
+
+        <div class="instructions">
+            <p>O jogo consiste em responder às 10 perguntas propostas de cultura geral geográfica. <br> Cada botão ativará uma pergunta, sendo que a mesma estará relacionada com o país onde este se encontra. <br> 
+            Sempre que haja uma resposta incorreta, o jogo termina devendo ser recomeçado de novo.</p>
+        </div>
+        <button class="start" id="start">Start</button>
+    </div>
+
+
+
+
+    <!-- -------------------------------BUTÕES----------------------------------------------------------------------------------------------- -->
+
+    <div class="buttondiv">
+
+        <button id="lisbon" class="presser"></button>
+        <button id="madrid" class="presser"></button>
+        <button id="paris" class="presser"></button>
+        <button id="dublin" class="presser"></button>
+        <button id="amsterdam" class="presser"></button>
+        <button id="berlin" class="presser"></button>
+        <button id="copenhagen" class="presser"></button>
+        <button id="warsaw" class="presser"></button>
+        <button id="rome" class="presser"></button>
+        <button id="bucharest" class="presser"></button>
+        <h5 class="score"></h5>
+    </div>
+
+    <!-- -------------------------------PERGUNTAS----------------------------------------------------------------------------------------------- -->
+
+    <div class="pergunta" id="perguntaLisboa">
+        <h2>Portugal</h2>
+        <h3>Qual é a capital de Portugal?</h3>
+        <div class="lower">
+            <input type="text" name="" id="ansLisbon" autocomplete="off">
+            <button class="lisboa-btn">Submit</button>
+        </div>
+    </div>
+
+    <div class="pergunta" id="perguntaMadrid">
+        <h2>Espanha</h2>
+        <h3>Madrid tem mais ou menos de 5 milhões de habitantes? </h3>
+        <div class="lower">
+            <input type="text" name="" id="ansMadrid" autocomplete="off">
+            <button class="madrid-btn">Submit</button>
+        </div>
+    </div>
+
+    <div class="pergunta" id="perguntaParis">
+        <h2>França</h2>
+        <h3>Que rio passa por Paris?</h3>
+        <div class="lower">
+            <input type="text" name="" id="ansParis" autocomplete="off">
+            <button class="paris-btn">Submit</button>
+        </div>
+    </div>
+
+    <div class="pergunta" id="perguntaAmsterdam">
+        <h2>Países Baixos</h2>
+        <h3>Em que cidade nasceu o futebolista Johan Cruyff?</h3>
+        <div class="lower">
+            <input type="text" name="" id="ansAmsterdam" autocomplete="off">
+            <button class="amsterdam-btn">Submit</button>
+        </div>
+
+    </div>
+
+    <div class="pergunta" id="perguntaDublin">
+        <h2>Irlanda</h2>
+        <h3>A "grande fome" de 1845–1849, foi originada pela escassez de que bem?</h3>
+        <div class="lower">
+            <input type="text" name="" id="ansDublin" autocomplete="off">
+            <button class="dublin-btn">Submit</button>
+        </div>
+
+    </div>
+
+
+    <div class="pergunta" id="perguntaRome">
+        <h2>Itália</h2>
+        <h3>Indique uma das três maiores cidades da Itália, para além da capital Roma.</h3>
+        <div class="lower">
+            <input type="text" name="" id="ansRome" autocomplete="off">
+            <button class="rome-btn">Submit</button>
+        </div>
+
+    </div>
+
+
+    <div class="pergunta" id="perguntaWarsaw">
+        <h2>Polónia</h2>
+        <h3>Qual destas cidades não é Poláca?</h3>
+        <div style="flex-direction: column;align-items: flex-start;" class="lower">
+            <form class="polishForm" action="">
+                <div class="first">
+                    <input type="radio" id="szczecin" name="fav_language" value="szczecin">
+                    <label for="szczecin">Szczecin</label><br>
+                </div>
+                <div class="first">
+                    <input type="radio" id="lublin" name="fav_language" value="lublin">
+                    <label for="lublin">Lublin</label><br>
+                </div>
+                <div class="first">
+                    <input type="radio" id="bydgoszcz" name="fav_language" value="bydgoszcz">
+                    <label for="bydgoszcz">Bydgoszcz</label><br>
+                </div>
+                <div class="first">
+                    <input type="radio" id="lviv" name="fav_language" value="lviv">
+                    <label for="lviv">Lviv</label>
+                </div>
+
+            </form>
+
+            <button class="warsaw-btn">Submit</button>
+        </div>
+
+    </div>
+
+    <div class="pergunta" id="perguntaBerlin">
+        <h2>Alemanha</h2>
+        <h3>Em que cidade alemã ocorre o Oktoberfest?</h3>
+        <div class="lower">
+            <input type="text" name="" id="ansBerlin" autocomplete="off">
+            <button class="berlin-btn">Submit</button>
+        </div>
+
+    </div>
+
+
+
+    <div class="pergunta" id="perguntaCopenhagen">
+        <h2>Dinamarca</h2>
+        <h3>Qual o autor do conto "A Pequena Sereia"?</h3>
+        <div class="lower">
+            <input type="text" name="" id="ansCopenhagen" autocomplete="off">
+            <button class="copenhagen-btn">Submit</button>
+        </div>
+
+    </div>
+
+    <div class="pergunta" id="perguntaBucharest">
+        <h2>Roménia</h2>
+        <h3>Que tipo de idioma é a lingua Romena? </h3>
+        <div style="flex-direction: column;align-items: flex-start;" class="lower">
+            <form class="polishForm" action="">
+                <div class="first">
+                    <input type="radio" id="romanico" value="romanico">
+                    <label>Românico</label><br>
+                </div>
+                <div class="first">
+                    <input type="radio" id="eslavo" value="eslavo">
+                    <label>Eslavo</label><br>
+                </div>
+                <div class="first">
+                    <input type="radio" id="latino" value="latino">
+                    <label>Latino</label><br>
+                </div>
+                <div class="first">
+                    <input type="radio" id="germanico" value="germanico">
+                    <label>Germânico</label>
+                </div>
+
+            </form>
+
+            <button style="margin-top: 10px;" class="bucharest-btn">Submit</button>
+        </div>
+
+    </div>
+
+
+    <!-- -------------------------------GAME OVER----------------------------------------------------------------------------------------------- -->
+
+
+    <div class="gameOver" id="gameOver">
+        <h1>GAME OVER!</h1>
+        <button onclick="window.location.reload()" class="startAgain" id="startAgain">Start Again</button>
+    </div>
+
+    <!-- -------------------------------VITÓRIA----------------------------------------------------------------------------------------------- -->
+    <div class="vitoria" id="vitoria">
+        <h1>Parabéns!</h1>
+        <p>Há um lugar para ti no ministério dos negócios estrangeiros!</p>
+        <button onclick="window.location.reload()" class="startAgain" id="startAgain">Start Again</button>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
