@@ -1,5 +1,3 @@
-
-
 var paises = [];
 
 
@@ -9,34 +7,48 @@ var clicked = false;
 
 
 
+
 document.getElementById("start").addEventListener("click", function () {
-    document.querySelector(".startScreen").style.display = "none";
-    document.querySelector(".buttondiv").style.display = "flex";
+
+    document.querySelector(".main-container").style.display = "none";
+    document.querySelector(".button-wrapper").style.display = "flex";
     makeSound("click");
 
-})
+    var nome = document.getElementById("name").value;
+    var aleatorio = Math.floor(Math.random()*2000);
 
-
-
-
-document.querySelector(".down").addEventListener("click", function () {
-    document.querySelector(".down").classList.toggle("rotation");
-    if (clicked === false) {
-
-        document.querySelector(".instructions").style.display = "flex";
-
-        clicked = true;
-        makeSound("click")
-
+    if (nome) {
+        document.getElementById("newName").innerHTML = nome;
     } else {
-
-        document.querySelector(".instructions").style.display = "none";
-
-        clicked = false;
-        makeSound("click")
+        document.getElementById("newName").innerHTML = "guest"+aleatorio;
     }
 
+
 })
+
+function getInformation() {
+    if(!clicked) {
+        document.querySelector(".information").style.display = "inline-block";
+        clicked = true
+    } else {
+        document.querySelector(".information").style.display = "none";
+        clicked = false;
+    }
+}
+
+
+
+document.querySelector(".instruct-btn").addEventListener("click", function () {
+    document.querySelector(".right").style.display = "flex";
+    document.querySelector(".left").style.display = "none";
+})
+
+document.querySelector(".back-btn").addEventListener("click", function () {
+    document.querySelector(".right").style.display = "none";
+    document.querySelector(".left").style.display = "flex";
+})
+
+
 
 
 
@@ -183,13 +195,13 @@ function lisbon() {
                 paises.includes("irlanda")
             ) {
                 document.getElementById("vitoria").style.display = "flex";
-                document.querySelector(".buttondiv").style.display = "none";
+                document.querySelector(".presser").style.display = "none";
                 makeSound("victory");
             }
         } else {
             document.getElementById("perguntaLisboa").style.display = "none";
             document.getElementById("gameOver").style.display = "flex";
-            document.querySelector(".buttondiv").style.display = "none";
+            document.querySelector(".presser").style.display = "none";
             makeSound("wrong");
 
 
@@ -210,24 +222,24 @@ function madrid() {
             clicked = false;
             makeSound("right");
             if (paises.includes("portugal") &&
-            paises.includes("espanha") &&
-            paises.includes("franca") &&
-            paises.includes("paises baixos") &&
-            paises.includes("dinamarca") &&
-            paises.includes("alemanha") &&
-            paises.includes("italia") && 
-            paises.includes("roménia") && 
-            paises.includes("polónia") &&
-            paises.includes("irlanda")
-        ) {
-            document.getElementById("vitoria").style.display = "flex";
-            document.querySelector(".buttondiv").style.display = "none";
-            makeSound("victory");
-        }
+                paises.includes("espanha") &&
+                paises.includes("franca") &&
+                paises.includes("paises baixos") &&
+                paises.includes("dinamarca") &&
+                paises.includes("alemanha") &&
+                paises.includes("italia") &&
+                paises.includes("roménia") &&
+                paises.includes("polónia") &&
+                paises.includes("irlanda")
+            ) {
+                document.getElementById("vitoria").style.display = "flex";
+                document.querySelector(".presser").style.display = "none";
+                makeSound("victory");
+            }
         } else {
             document.getElementById("perguntaMadrid").style.display = "none";
             document.getElementById("gameOver").style.display = "flex";
-            document.querySelector(".buttondiv").style.display = "none"
+            document.querySelector(".presser").style.display = "none"
             makeSound("wrong");
         }
     })
@@ -246,24 +258,24 @@ function paris() {
             clicked = false;
             makeSound("right");
             if (paises.includes("portugal") &&
-            paises.includes("espanha") &&
-            paises.includes("franca") &&
-            paises.includes("paises baixos") &&
-            paises.includes("dinamarca") &&
-            paises.includes("alemanha") &&
-            paises.includes("italia") && 
-            paises.includes("roménia") && 
-            paises.includes("polónia") &&
-            paises.includes("irlanda")
-        ) {
-            document.getElementById("vitoria").style.display = "flex";
-            document.querySelector(".buttondiv").style.display = "none";
-            makeSound("victory");
-        }
+                paises.includes("espanha") &&
+                paises.includes("franca") &&
+                paises.includes("paises baixos") &&
+                paises.includes("dinamarca") &&
+                paises.includes("alemanha") &&
+                paises.includes("italia") &&
+                paises.includes("roménia") &&
+                paises.includes("polónia") &&
+                paises.includes("irlanda")
+            ) {
+                document.getElementById("vitoria").style.display = "flex";
+                document.querySelector(".presser").style.display = "none";
+                makeSound("victory");
+            }
         } else {
             document.getElementById("perguntaParis").style.display = "none";
             document.getElementById("gameOver").style.display = "flex";
-            document.querySelector(".buttondiv").style.display = "none";
+            document.querySelector(".presser").style.display = "none";
             makeSound("wrong");
         }
     })
@@ -281,24 +293,24 @@ function amsterdam() {
             clicked = false;
             makeSound("right");
             if (paises.includes("portugal") &&
-            paises.includes("espanha") &&
-            paises.includes("franca") &&
-            paises.includes("paises baixos") &&
-            paises.includes("dinamarca") &&
-            paises.includes("alemanha") &&
-            paises.includes("italia") && 
-            paises.includes("roménia") && 
-            paises.includes("polónia") &&
-            paises.includes("irlanda")
-        ) {
-            document.getElementById("vitoria").style.display = "flex";
-            document.querySelector(".buttondiv").style.display = "none";
-            makeSound("victory");
-        }
+                paises.includes("espanha") &&
+                paises.includes("franca") &&
+                paises.includes("paises baixos") &&
+                paises.includes("dinamarca") &&
+                paises.includes("alemanha") &&
+                paises.includes("italia") &&
+                paises.includes("roménia") &&
+                paises.includes("polónia") &&
+                paises.includes("irlanda")
+            ) {
+                document.getElementById("vitoria").style.display = "flex";
+                document.querySelector(".presser").style.display = "none";
+                makeSound("victory");
+            }
         } else {
             document.getElementById("perguntaAmsterdam").style.display = "none";
             document.getElementById("gameOver").style.display = "flex";
-            document.querySelector(".buttondiv").style.display = "none";
+            document.querySelector(".presser").style.display = "none";
             makeSound("wrong");
         }
     })
@@ -316,24 +328,24 @@ function dublin() {
             clicked = false;
             makeSound("right");
             if (paises.includes("portugal") &&
-            paises.includes("espanha") &&
-            paises.includes("franca") &&
-            paises.includes("paises baixos") &&
-            paises.includes("dinamarca") &&
-            paises.includes("alemanha") &&
-            paises.includes("italia") && 
-            paises.includes("roménia") && 
-            paises.includes("polónia") &&
-            paises.includes("irlanda")
-        ) {
-            document.getElementById("vitoria").style.display = "flex";
-            document.querySelector(".buttondiv").style.display = "none";
-            makeSound("victory");
-        }
+                paises.includes("espanha") &&
+                paises.includes("franca") &&
+                paises.includes("paises baixos") &&
+                paises.includes("dinamarca") &&
+                paises.includes("alemanha") &&
+                paises.includes("italia") &&
+                paises.includes("roménia") &&
+                paises.includes("polónia") &&
+                paises.includes("irlanda")
+            ) {
+                document.getElementById("vitoria").style.display = "flex";
+                document.querySelector(".presser").style.display = "none";
+                makeSound("victory");
+            }
         } else {
             document.getElementById("perguntaDublin").style.display = "none";
             document.getElementById("gameOver").style.display = "flex";
-            document.querySelector(".buttondiv").style.display = "none";
+            document.querySelector(".presser").style.display = "none";
             makeSound("wrong");
         }
     })
@@ -356,19 +368,19 @@ function rome() {
                 paises.includes("paises baixos") &&
                 paises.includes("dinamarca") &&
                 paises.includes("alemanha") &&
-                paises.includes("italia") && 
-                paises.includes("roménia") && 
+                paises.includes("italia") &&
+                paises.includes("roménia") &&
                 paises.includes("polónia") &&
                 paises.includes("irlanda")
             ) {
                 document.getElementById("vitoria").style.display = "flex";
-                document.querySelector(".buttondiv").style.display = "none";
+                document.querySelector(".presser").style.display = "none";
                 makeSound("victory");
             }
         } else {
             document.getElementById("perguntaRome").style.display = "none";
             document.getElementById("gameOver").style.display = "flex";
-            document.querySelector(".buttondiv").style.display = "none";
+            document.querySelector(".presser").style.display = "none";
             makeSound("wrong");
 
         }
@@ -381,29 +393,30 @@ function warsaw() {
     document.querySelector(".warsaw-btn").addEventListener("click", function () {
 
         if (document.getElementById("lviv").checked == true) {
-            paises.push("polónia");            document.getElementById("perguntaWarsaw").style.display = "none";
+            paises.push("polónia");
+            document.getElementById("perguntaWarsaw").style.display = "none";
             document.getElementById("warsaw").style.display = "none";
             clicked = false;
             makeSound("right");
             if (paises.includes("portugal") &&
-            paises.includes("espanha") &&
-            paises.includes("franca") &&
-            paises.includes("paises baixos") &&
-            paises.includes("dinamarca") &&
-            paises.includes("alemanha") &&
-            paises.includes("italia") && 
-            paises.includes("roménia") && 
-            paises.includes("polónia") &&
-            paises.includes("irlanda")
-        ) {
-            document.getElementById("vitoria").style.display = "flex";
-            document.querySelector(".buttondiv").style.display = "none";
-            makeSound("victory");
-        }
+                paises.includes("espanha") &&
+                paises.includes("franca") &&
+                paises.includes("paises baixos") &&
+                paises.includes("dinamarca") &&
+                paises.includes("alemanha") &&
+                paises.includes("italia") &&
+                paises.includes("roménia") &&
+                paises.includes("polónia") &&
+                paises.includes("irlanda")
+            ) {
+                document.getElementById("vitoria").style.display = "flex";
+                document.querySelector(".presser").style.display = "none";
+                makeSound("victory");
+            }
         } else {
             document.getElementById("perguntaWarsaw").style.display = "none";
             document.getElementById("gameOver").style.display = "flex";
-            document.querySelector(".buttondiv").style.display = "none";
+            document.querySelector(".presser").style.display = "none";
             makeSound("wrong");
         }
     })
@@ -421,24 +434,24 @@ function berlin() {
             clicked = false;
             makeSound("right");
             if (paises.includes("portugal") &&
-            paises.includes("espanha") &&
-            paises.includes("franca") &&
-            paises.includes("paises baixos") &&
-            paises.includes("dinamarca") &&
-            paises.includes("alemanha") &&
-            paises.includes("italia") && 
-            paises.includes("roménia") && 
-            paises.includes("polónia") &&
-            paises.includes("irlanda")
-        ) {
-            document.getElementById("vitoria").style.display = "flex";
-            document.querySelector(".buttondiv").style.display = "none";
-            makeSound("victory");
-        }
+                paises.includes("espanha") &&
+                paises.includes("franca") &&
+                paises.includes("paises baixos") &&
+                paises.includes("dinamarca") &&
+                paises.includes("alemanha") &&
+                paises.includes("italia") &&
+                paises.includes("roménia") &&
+                paises.includes("polónia") &&
+                paises.includes("irlanda")
+            ) {
+                document.getElementById("vitoria").style.display = "flex";
+                document.querySelector(".presser").style.display = "none";
+                makeSound("victory");
+            }
         } else {
             document.getElementById("perguntaBerlin").style.display = "none";
             document.getElementById("gameOver").style.display = "flex";
-            document.querySelector(".buttondiv").style.display = "none";
+            document.querySelector(".presser").style.display = "none";
             makeSound("wrong");
         }
     })
@@ -449,31 +462,31 @@ function copenhagen() {
 
     document.querySelector(".copenhagen-btn").addEventListener("click", function () {
         var respostaCopenhagen = document.getElementById("ansCopenhagen").value;
-        if (respostaCopenhagen.toLowerCase() === "hans christian andersen".toLowerCase()) {
+        if (respostaCopenhagen.toLowerCase() === "hans christian andersen".toLowerCase() || respostaCopenhagen.toLowerCase() === "andersen".toLowerCase()) {
             paises.push("dinamarca");
             document.getElementById("perguntaCopenhagen").style.display = "none";
             document.getElementById("copenhagen").style.display = "none";
             clicked = false;
             makeSound("right");
             if (paises.includes("portugal") &&
-            paises.includes("espanha") &&
-            paises.includes("franca") &&
-            paises.includes("paises baixos") &&
-            paises.includes("dinamarca") &&
-            paises.includes("alemanha") &&
-            paises.includes("italia") && 
-            paises.includes("roménia") && 
-            paises.includes("polónia") &&
-            paises.includes("irlanda")
-        ) {
-            document.getElementById("vitoria").style.display = "flex";
-            document.querySelector(".buttondiv").style.display = "none";
-            makeSound("victory");
-        }
+                paises.includes("espanha") &&
+                paises.includes("franca") &&
+                paises.includes("paises baixos") &&
+                paises.includes("dinamarca") &&
+                paises.includes("alemanha") &&
+                paises.includes("italia") &&
+                paises.includes("roménia") &&
+                paises.includes("polónia") &&
+                paises.includes("irlanda")
+            ) {
+                document.getElementById("vitoria").style.display = "flex";
+                document.querySelector(".presser").style.display = "none";
+                makeSound("victory");
+            }
         } else {
             document.getElementById("perguntaCopenhagen").style.display = "none";
             document.getElementById("gameOver").style.display = "flex";
-            document.querySelector(".buttondiv").style.display = "none";
+            document.querySelector(".presser").style.display = "none";
             makeSound("wrong");
         }
     })
@@ -491,24 +504,24 @@ function bucharest() {
             clicked = false;
             makeSound("right");
             if (paises.includes("portugal") &&
-            paises.includes("espanha") &&
-            paises.includes("franca") &&
-            paises.includes("paises baixos") &&
-            paises.includes("dinamarca") &&
-            paises.includes("alemanha") &&
-            paises.includes("italia") && 
-            paises.includes("roménia") && 
-            paises.includes("polónia") &&
-            paises.includes("irlanda")
-        ) {
-            document.getElementById("vitoria").style.display = "flex";
-            document.querySelector(".buttondiv").style.display = "none";
-            makeSound("victory");
-        }
+                paises.includes("espanha") &&
+                paises.includes("franca") &&
+                paises.includes("paises baixos") &&
+                paises.includes("dinamarca") &&
+                paises.includes("alemanha") &&
+                paises.includes("italia") &&
+                paises.includes("roménia") &&
+                paises.includes("polónia") &&
+                paises.includes("irlanda")
+            ) {
+                document.getElementById("vitoria").style.display = "flex";
+                document.querySelector(".presser").style.display = "none";
+                makeSound("victory");
+            }
         } else {
             document.getElementById("perguntaBucharest").style.display = "none";
             document.getElementById("gameOver").style.display = "flex";
-            document.querySelector(".buttondiv").style.display = "none"
+            document.querySelector(".presser").style.display = "none"
             makeSound("wrong");
         }
     })

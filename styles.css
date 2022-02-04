@@ -4,158 +4,258 @@
     box-sizing: border-box;
 }
 
+img {
+    display: block;
+    width: 100%;
+}
+
 html {
     height: 100%;
 }
 
 body {
-    background: url("eu.jpg") no-repeat;
-    background-position: center center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+
+    font-size: 62.5%;
     font-family: "Raleway", sans-serif;
-    overflow: hidden;
 }
 
 /* ------------------------------------START SCREEN ------------------------------------------------- */
 
-.startScreen {
-    width: 300px;
-    height: 100%;
-    margin-left: 20%;
+.main-container {
     color: white;
     background-color: rgba(47, 0, 255, 0.7);
+    width: 100vw;
+    height: 100vh;
+    padding: 2em;
+    display: flex;
+}
+
+.startScreen {
+    margin-top: 4em;
+    width: min(60%, 70.5rem);
+    margin-inline: auto;
+    display: flex;
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.startScreen .start {
+    background: none;
+}
+
+.left {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    width: 100%;
+    padding: 2em;
 }
 
-.startScreen img {
+.left img {
+    width: 50%;
 
-    width: 230px;
-    height: auto;
 }
 
-
-.startScreen .start {
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-    color: blue;
-    height: 50px;
-    width: 100px;
-    cursor: pointer;
+#name {
+    margin-top: 2em;
+    font-size: 1.7vw;
+    padding: .2em;
+    color: rgb(37, 37, 37);
 }
 
-
-.startScreen .start:hover {
-    border: 2px solid rgb(27, 2, 51);
-}
-
-.startScreen .instrucText {
+.left .navbuttons {
+    padding: 2em;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-
-
-
-.arrow {
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    margin-left: 10px;
+.left button {
+    padding: 1em;
+    background: none;
+    border: none;
+    color: white;
     cursor: pointer;
+    width: 70%;
+    font-size: 1.3vw;
 }
 
-
-
-
-.down {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
+.left button:hover {
+    color: yellow;
 }
 
-
-.rotation {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    
-}
-
-
-.instructions {
+.right {
     display: none;
-    justify-content: center;
-    align-items: center;
-    transition: all 2s ease-in-out;
+    flex-direction: column;
+}
+
+.right .instructions {
+
+    padding: 2em;
 
 }
 
-.instructions p {
-    width: 80%;
-    transition: all 2s ease-in-out;
+.right .instructions p {
+    font-size: 2vw;
 }
+
+.right button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 5vw;
+}
+
+.right button:hover {
+    color: yellow;
+}
+
+
+
 
 
 /* ------------------------------------BUTÕES ------------------------------------------------- */
 
 
-.buttondiv {
-    max-width: 100%;
-    max-height: 100%;
+
+.button-wrapper {
+    width: 100%;
+    position: relative;
     display: none;
+    flex-direction: column;
+}
+
+/* ---------------------------- NAVBAR---------------------------- */
+
+.navbar {
+    width: 100%;
+    background: rgba(47, 0, 255, 0.7);
+    padding: .4em;
+    display: flex;
+    position: relative;
+}
+
+.navbar .container {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: .3em auto;
+}
+
+.navbar .container .esquerda {
+
+    display: flex;
+    flex: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.navbar .container .esquerda img {
+    width: 3.5vw;
+    margin: 0 2em;
+}
+
+.navbar .container .esquerda h3 {
+    font-size: 1.5vw;
+}
+
+.navbar .container .direita {
+    display: flex;
+    flex: 50%;
+    justify-content: flex-end;
+    align-items: center;
+
 
 }
 
-.presser {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: red;
-    border: 4px solid #c80815;
+.navbar .container .direita button {
+    color: white;
+    background: none;
+    border: none;
+    font-size: .5vw;
+    margin-left: 2em;
+    cursor: pointer;
+}
+
+
+/* -------------------------------------------INFORMATION-------------------------------- */
+
+.information {
     position: absolute;
+    display: none;
+    background: rgba(47, 0, 255, 0.7);
+    width: 100%;
+    top: 100%;
+    padding: 2.5em;
+    text-align: center;
+
+}
+
+.information .info-container p {
+    line-height: 1.5;
+    font-size: .9em;
+}
+
+.button-wrapper img {
+    width: 90%;
+    height: auto;
+    text-align: center;
+    margin: .5% auto 5% auto;
+    display: block;
+}
+
+.button-wrapper .presser {
+    width: 1.5%;
+    height: 2.5%;
+    border-radius: 50%;
+    background-color: yellow;
+    border: none;
+    position: absolute;
+    display: block;
 
 }
 
 .presser:focus {
-    border: none;
+
     background-color: brown;
 }
 
+.presser:hover {
+    background-color: magenta;
+}
+
 #lisbon {
-    top: 90%;
+    top: 78%;
     left: 41%;
 }
 
 #madrid {
-    top: 92%;
-    left: 45%;
+    top: 77%;
+    left: 46%;
 }
 
 #paris {
-    top: 70%;
+    top: 65%;
     left: 52%;
 }
 
 #dublin {
-    top: 55%;
+    top: 53%;
     left: 44%;
 }
 
 
 #amsterdam {
-    top: 60%;
-    left: 55%;
+    top: 57%;
+    left: 54%;
 }
 
 #berlin {
-    top: 60%;
-    left: 60%;
+    top: 57%;
+    left: 58%;
 }
 
 #copenhagen {
@@ -164,172 +264,221 @@ body {
 }
 
 #warsaw {
-    top: 60%;
+    top: 55%;
     left: 65%;
 }
 
 #rome {
-    top: 85%;
+    top: 77%;
     left: 60%;
 }
 
 #bucharest {
-    top: 78%;
-    left: 72%;
+    top: 69%;
+    left: 70%;
 }
 
 /* ------------------------------------GAME OVER ------------------------------------------------- */
 
 
 .gameOver {
-    margin: auto;
-    width: 300px;
-    height: 250px;
-    background-color: #fff;
-    border-radius: 25px;
     display: none;
+    width: 28%;
+    padding: 1.7em 1.6em;
+    background-color: rgba(47, 0, 255, 0.7);
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #888888;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+
+}
+
+.gameOver .gameOver-wrapper {
+    width: 100%;
+    color: white;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 5px 10px 18px #888888;
-    color: rgb(29, 28, 28);
-    margin-top: 200px;
-
+    margin-inline: auto;
 }
 
-.gameOver h1 {
+.gameOver .gameOver-wrapper h1 {
+    font-size: 2vw;
     font-weight: 900;
-    color: rgb(29, 28, 28);
+    margin-bottom: .5em;
+
 }
 
 
-.gameOver .startAgain {
-    background-color: blue;
+.gameOver .gameOver-wrapper p {
+    font-size: 1.4vw;
+    margin-bottom: 1em;
+}
+
+
+.gameOver .gameOver-wrapper .startAgain {
+    background: none;
     border: none;
-    border-radius: 10px;
     color: white;
-    height: 50px;
-    width: 100px;
     cursor: pointer;
-    margin-top: 20px;
+    font-size: .7vw;
 }
 
-.gameOver .startAgain:hover {
-    border: 4px solid darkblue;
-    background-color: rgb(0, 0, 221);
+.gameOver .gameOver-wrapper .startAgain:hover {
+    color: yellow;
 }
 
 
 /* ------------------------------------VITORIA------------------------------------------------- */
 
 .vitoria {
-    margin: auto;
-    width: 350px;
-    height: 300px;
-    background-color: #fff;
-    border-radius: 25px;
     display: none;
+    width: 28%;
+    padding: 1.7em 1.6em;
+    background-color: rgba(47, 0, 255, 0.7);
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #888888;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}
+
+
+.vitoria .gameOver-wrapper {
+    width: 100%;
+    color: white;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 5px 10px 18px #888888;
-    color: rgb(29, 28, 28);
-    margin-top: 200px;
-    text-align: center;
+    margin-inline: auto;
 }
 
-.vitoria h1 {
-    width: 90%;
+.vitoria .gameOver-wrapper h1 {
+    font-size: 2vw;
     font-weight: 900;
-    font-size: 3rem;
-}
+    margin-bottom: .5em;
 
-.vitoria span {
-    font-weight: 700;
-    font-size: 2rem;
-}
-
-.vitoria p {
-    width: 90%;
 }
 
 
-.vitoria .startAgain {
-    background-color: blue;
+.vitoria .gameOver-wrapper p {
+    font-size: 1.4vw;
+    margin-bottom: 1em;
+}
+
+
+.vitoria .gameOver-wrapper .startAgain {
+    background: none;
     border: none;
-    border-radius: 10px;
     color: white;
-    height: 50px;
-    width: 100px;
     cursor: pointer;
-    margin-top: 20px;
+    font-size: .7vw;
 }
 
-.vitoria .startAgain:hover {
-    border: 4px solid darkblue;
-    background-color: rgb(0, 0, 221);
+.vitoria .gameOver-wrapper .startAgain:hover {
+    color: yellow;
 }
-
 
 
 /* ------------------------------------PERGUNTAS------------------------------------------------- */
 
 
-
 .pergunta {
-    width: 300px;
-    height: 140px;
+    width: 20%;
     background-color: white;
-    border-radius: 25px;
-    display: none;
+    border-radius: 15px;
     box-shadow: 5px 10px 18px #888888;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 10px 15px;
-    margin-top: 200px;
-    margin-left: 200px;
     color: rgb(29, 28, 28);
+    padding: 2em;
+    position: absolute;
+    top: 30%;
+    left: 22%;
+    z-index: 3;
 }
 
-.pergunta h2 {
-    font-size: 1.3rem;
+@media (max-width: 570px) {
+    .pergunta {
+        padding: 1em;
+        border-radius: 5px;
+    }
+
 }
 
-.pergunta h3 {
-    margin-top: 3px;
+
+.pergunta .questionWrapper {
+    width: 100%;
+}
+
+.pergunta .questionWrapper h2 {
+    font-size: 1.6vw;
+    font-weight: 900;
+    width: 100%;
+}
+
+
+
+.pergunta .questionWrapper h3 {
+    width: 100%;
+    margin-top: .4em;
+    font-size: 1.4vw;
     font-weight: 500;
 }
 
-.pergunta .lower {
-    padding-top: 10px;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
-.pergunta .lower input {
+
+.pergunta .questionWrapper input {
+    margin-top: .6em;
     border-radius: 5px;
-    height: 1.5rem;
+    width: 100%;
+    /* max-width: 400px; */
+    padding: .3em;
+    font-size: 1.2vw;
 }
 
-.pergunta .lower button {
+.pergunta .questionWrapper button {
+    margin-top: .5em;
     border: none;
-    width: 50px;
-    height: 25px;
-    background: blueviolet;
+    background: none;
     color: white;
-    border-radius: 10px;
-    font-size: .7rem;
+    border-radius: 5px;
+    font-size: 1.4vw;
+    cursor: pointer;
+    width: 100%;
+    background: blue;
+    padding: .3em;
+
 }
 
-.pergunta .lower button:hover {
-    border: 2px solid darkblue;
+.pergunta .questionWrapper button:hover {
+    color: blue;
+    background: none;
+    border: .3px solid darkgray;
 }
 
-.warsaw-btn {
-    margin-top: 20px;
+.polishForm {
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+
+
+.polishForm .first input {
+    width: 2vw;
+
+}
+
+
+.polishForm .first label {
+    font-size: 1.3vw;
+    margin-left: 1em;
 }
 
 #perguntaLisboa {
@@ -350,39 +499,24 @@ body {
 
 #perguntaDublin {
     display: none;
-    height: 170px;
 }
 
 #perguntaRome {
     display: none;
-    height: 180px;
 }
 
 #perguntaWarsaw {
     display: none;
-    height: 250px;
-}
-
-.polishForm .first {
-    display: flex;
-    align-items: center;
-}
-
-.polishForm .first input {
-    margin-right: 10px;
 }
 
 #perguntaBerlin {
     display: none;
-    height: 150px;
 }
 
 #perguntaCopenhagen {
     display: none;
-    height: 150px;
 }
 
 #perguntaBucharest {
     display: none;
-    height: 250px;
 }
