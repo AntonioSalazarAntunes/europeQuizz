@@ -6,7 +6,6 @@
 
 img {
     display: block;
-    width: 100%;
 }
 
 html {
@@ -17,6 +16,9 @@ body {
 
     font-size: 62.5%;
     font-family: "Raleway", sans-serif;
+    width: 100%;
+    background: lightblue;
+
 }
 
 /* ------------------------------------START SCREEN ------------------------------------------------- */
@@ -27,14 +29,18 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    padding: 1em 3em;
 }
 
 .startScreen {
-    margin-top: 10em;
+    width: 80%;
+    margin-bottom: 10vh;
+  
     margin-inline: auto;
     display: flex;
     padding: 4em 2em;
     text-align: center;
+    
 }
 
 .startScreen .start {
@@ -121,19 +127,23 @@ body {
     position: relative;
     display: none;
     flex-direction: column;
+    overflow: hidden;
+
 }
 
 /* ---------------------------- NAVBAR---------------------------- */
 
-.navbar {
+
+
+.button-wrapper .navbar {
     width: 100%;
     background: rgba(47, 0, 255, 0.7);
-    padding: .6em;
+    padding: 1.5vw;
     display: flex;
-    position: relative;
+    position: fixed;
 }
 
-.navbar .container {
+.button-wrapper .navbar .container {
     width: 60%;
     display: flex;
     justify-content: center;
@@ -142,7 +152,7 @@ body {
     margin: .3em auto;
 }
 
-.navbar .container .esquerda {
+.button-wrapper .navbar .container .esquerda {
 
     display: flex;
     flex: 50%;
@@ -151,16 +161,17 @@ body {
 }
 
 
-.navbar .container .esquerda img {
+.button-wrapper .navbar .container .esquerda img {
     width: 3.5vw;
+
     margin: 0 2em;
 }
 
-.navbar .container .esquerda h3 {
+.button-wrapper .navbar .container .esquerda h3 {
     font-size: 1.5vw;
 }
 
-.navbar .container .direita {
+.button-wrapper .navbar .container .direita {
     display: flex;
     flex: 50%;
     justify-content: flex-end;
@@ -169,7 +180,7 @@ body {
 
 }
 
-.navbar .container .direita button {
+.button-wrapper .navbar .container .direita button {
     color: white;
     background: none;
     border: none;
@@ -181,7 +192,7 @@ body {
 
 /* -------------------------------------------INFORMATION-------------------------------- */
 
-.information {
+.button-wrapper .navbar .container .information {
     position: absolute;
     display: none;
     background: rgba(47, 0, 255, 0.7);
@@ -192,22 +203,32 @@ body {
 
 }
 
-.information .info-container p {
+.button-wrapper .navbar .container .information .info-container p {
     line-height: 1.5;
     font-size: .9em;
 }
 
-.button-wrapper img {
-    width: 90%;
+/* 
+------------------------------------------BOARD----------------------- */
+
+.button-wrapper .boardSection {
+    width: 100%;
+   
+}
+
+.button-wrapper .boardSection img {
+    width: 80%;
     height: auto;
     text-align: center;
     margin: .5% auto 5% auto;
     display: block;
 }
 
-.button-wrapper .presser {
+
+
+.button-wrapper .boardSection .presser {
     width: 1.5%;
-    height: 2.5%;
+    height: 1.5%;
     border-radius: 50%;
     background-color: yellow;
     border: none;
@@ -227,52 +248,53 @@ body {
 
 #lisbon {
     top: 78%;
-    left: 41%;
+    left: 12%;
 }
 
 #madrid {
     top: 77%;
-    left: 46%;
+    left: 22%;
 }
 
 #paris {
     top: 65%;
-    left: 52%;
+    left: 33%;
 }
 
 #dublin {
-    top: 53%;
-    left: 44%;
+    top: 44%;
+    left: 21%;
 }
 
 
 #amsterdam {
-    top: 57%;
-    left: 54%;
+    top: 50%;
+    left: 39%;
 }
 
 #berlin {
-    top: 57%;
-    left: 58%;
+    top: 50%;
+    left: 45%;
 }
 
 #copenhagen {
-    top: 50%;
-    left: 58%;
+    top: 40%;
+    left: 45%;
 }
 
 #warsaw {
-    top: 55%;
-    left: 65%;
+    top: 50%;
+    left: 60%;
+   
 }
 
 #rome {
     top: 77%;
-    left: 60%;
+    left: 50%;
 }
 
 #bucharest {
-    top: 69%;
+    top: 65%;
     left: 70%;
 }
 
@@ -387,23 +409,23 @@ body {
 .pergunta {
     width: 20%;
     background-color: white;
-    border-radius: 15px;
+    border-radius: 1vw;
     box-shadow: 5px 10px 18px #888888;
     color: rgb(29, 28, 28);
-    padding: 2em;
-    position: absolute;
-    top: 30%;
-    left: 22%;
+    padding: 2vw;
+    position: fixed;
+    top: 36%;
+    left: 40%;
     z-index: 3;
 }
 
-@media (max-width: 570px) {
+/* @media (max-width: 570px) {
     .pergunta {
         padding: 1em;
         border-radius: 5px;
     }
 
-}
+} */
 
 
 .pergunta .questionWrapper {
@@ -429,7 +451,7 @@ body {
 
 .pergunta .questionWrapper input {
     margin-top: .6em;
-    border-radius: 5px;
+    border-radius: .3vw;
     width: 100%;
     /* max-width: 400px; */
     padding: .3em;
@@ -441,7 +463,7 @@ body {
     border: none;
     background: none;
     color: white;
-    border-radius: 5px;
+    border-radius: .3vw;
     font-size: 1.4vw;
     cursor: pointer;
     width: 100%;
@@ -458,15 +480,15 @@ body {
 
 .polishForm {
     width: 100%;
-    margin-top: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    margin-bottom: 1em;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
-
+.polishForm .first {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
 
 .polishForm .first input {
     width: 2vw;
